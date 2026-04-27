@@ -1,5 +1,10 @@
 [gd_scene format=3 uid="uid://c6llttwscmri6"]
 
+[ext_resource type="AudioStream" uid="uid://bo7lacgxhi24c" path="res://audio/kick.mp3" id="1_jyhfs"]
+[ext_resource type="AudioStream" uid="uid://ditprrclwx0a7" path="res://audio/snare.mp3" id="2_tbgi4"]
+[ext_resource type="AudioStream" uid="uid://co7hsmd2dfcyd" path="res://audio/hihat.mp3" id="3_tefeu"]
+[ext_resource type="AudioStream" uid="uid://ccwtuvnoy477w" path="res://audio/clap.mp3" id="4_o6xl0"]
+
 [node name="Main" type="Control" unique_id=509832909]
 layout_mode = 3
 anchors_preset = 15
@@ -64,9 +69,13 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="KickAudio" type="AudioStreamPlayer2D" parent="." unique_id=2141917504]
+stream = ExtResource("1_jyhfs")
 
 [node name="SnareAudio" type="AudioStreamPlayer2D" parent="." unique_id=1957261903]
+stream = ExtResource("2_tbgi4")
 
 [node name="HiHatAudio" type="AudioStreamPlayer2D" parent="." unique_id=1351456899]
+stream = ExtResource("3_tefeu")
 
 [node name="ClapAudio" type="AudioStreamPlayer2D" parent="." unique_id=1828427053]
+stream = ExtResource("4_o6xl0")
