@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6llttwscmri6"]
 
 [ext_resource type="AudioStream" uid="uid://bo7lacgxhi24c" path="res://audio/kick.mp3" id="1_jyhfs"]
+[ext_resource type="Script" uid="uid://birhoobvw8wbd" path="res://scenes/main.gd" id="1_tbgi4"]
 [ext_resource type="AudioStream" uid="uid://ditprrclwx0a7" path="res://audio/snare.mp3" id="2_tbgi4"]
 [ext_resource type="AudioStream" uid="uid://co7hsmd2dfcyd" path="res://audio/hihat.mp3" id="3_tefeu"]
 [ext_resource type="AudioStream" uid="uid://ccwtuvnoy477w" path="res://audio/clap.mp3" id="4_o6xl0"]
@@ -12,6 +13,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_tbgi4")
 
 [node name="TheTitle" type="Label" parent="." unique_id=1682060943]
 layout_mode = 0
