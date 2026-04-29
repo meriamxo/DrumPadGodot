@@ -92,6 +92,10 @@ max_value = 2.0
 step = 0.1
 value = 1.0
 
+[node name="RandomBeat" type="Button" parent="ControlsBox" unique_id=1520820014]
+layout_mode = 2
+text = "Random Beat"
+
 [node name="KickAudio" type="AudioStreamPlayer2D" parent="." unique_id=2141917504]
 stream = ExtResource("1_jyhfs")
 

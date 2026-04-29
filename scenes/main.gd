@@ -12,12 +12,14 @@ extends Control
 
 @onready var volume_slider = $ControlsBox/VolumeSlider
 @onready var pitch_slider = $ControlsBox/PitchSlider
+@onready var random_beat_button = $ControlsBox/RandomBeat
 
 func _ready():
 	kick_button.pressed.connect(_on_kick_pressed)
 	snare_button.pressed.connect(_on_snare_pressed)
 	hihat_button.pressed.connect(_on_hihat_pressed)
 	clap_button.pressed.connect(_on_clap_pressed)
+	random_beat_button.pressed.connect(_on_random_beat_pressed)
 
 	volume_slider.value_changed.connect(_on_volume_changed)
 	pitch_slider.value_changed.connect(_on_pitch_changed)
@@ -58,6 +60,24 @@ func _on_pitch_changed(value):
 	snare_audio.pitch_scale = value
 	hihat_audio.pitch_scale = value
 	clap_audio.pitch_scale = value
+
+func _on_random_beat_pressed():
+	play_random_beat()
+
+func play_random_beat():
+	for i in range(8):
+		var choice = randi() % 4
+
+		if choice == 0:
+			_on_kick_pressed()
+		elif choice == 1:
+			_on_snare_pressed()
+		elif choice == 2:
+			_on_hihat_pressed()
+		else:
+			_on_clap_pressed()
+
+		await get_tree().create_timer(0.25).timeout
 
 func _input(event):
 	if event.is_action_pressed("kick"):
