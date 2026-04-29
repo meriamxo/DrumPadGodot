@@ -15,6 +15,12 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tbgi4")
 
+[node name="Background" type="ColorRect" parent="." unique_id=1865854929]
+layout_mode = 0
+offset_right = 1151.0
+offset_bottom = 650.0
+color = Color(1, 0.62352943, 1, 1)
+
 [node name="TheTitle" type="Label" parent="." unique_id=1682060943]
 layout_mode = 0
 offset_left = 477.0
@@ -22,14 +28,16 @@ offset_top = -1.0
 offset_right = 555.0
 offset_bottom = 22.0
 scale = Vector2(2.4517388, 1.9999001)
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
 text = "Drum Pad"
 
 [node name="TheInstructions" type="Label" parent="." unique_id=1954653675]
 layout_mode = 0
-offset_left = 398.0
-offset_top = 53.0
-offset_right = 834.0
-offset_bottom = 148.0
+offset_left = 384.0
+offset_top = 45.0
+offset_right = 820.0
+offset_bottom = 140.0
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
 text = "To play, please click the pads or press Q W E R."
 
 [node name="PadGrid" type="GridContainer" parent="." unique_id=1834240314]
@@ -50,21 +58,26 @@ columns = 2
 [node name="TheKickPad" type="Button" parent="PadGrid" unique_id=1848498393]
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.023529412, 0.09019608, 0.07058824, 1)
+theme_override_colors/font_hover_color = Color(0.85882354, 0.2509804, 0.5764706, 1)
 text = "Kick"
 
 [node name="TheSnarePad" type="Button" parent="PadGrid" unique_id=1327658711]
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
 text = "Snare"
 
 [node name="TheHiHatPad" type="Button" parent="PadGrid" unique_id=1762379889]
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
 text = "Hi Hat"
 
 [node name="TheClapButton" type="Button" parent="PadGrid" unique_id=59644306]
 custom_minimum_size = Vector2(180, 100)
 layout_mode = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
 text = "Clap"
 
 [node name="ControlsBox" type="VBoxContainer" parent="." unique_id=1449089479]
@@ -74,6 +87,7 @@ offset_bottom = 40.0
 
 [node name="Volume" type="Label" parent="ControlsBox" unique_id=747099218]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
 text = "Volume"
 
 [node name="VolumeSlider" type="HSlider" parent="ControlsBox" unique_id=1465857478]
@@ -83,6 +97,7 @@ max_value = 10.0
 
 [node name="Pitch" type="Label" parent="ControlsBox" unique_id=1631416270]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
 text = "Pitch"
 
 [node name="PitchSlider" type="HSlider" parent="ControlsBox" unique_id=127128978]
@@ -94,6 +109,8 @@ value = 1.0
 
 [node name="RandomBeat" type="Button" parent="ControlsBox" unique_id=1520820014]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+theme_override_colors/font_outline_color = Color(0.9490196, 0.11372549, 0.9490196, 1)
 text = "Random Beat"
 
 [node name="KickAudio" type="AudioStreamPlayer2D" parent="." unique_id=2141917504]
