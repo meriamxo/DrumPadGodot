@@ -17,8 +17,10 @@ script = ExtResource("1_tbgi4")
 
 [node name="TheTitle" type="Label" parent="." unique_id=1682060943]
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 477.0
+offset_top = -1.0
+offset_right = 555.0
+offset_bottom = 22.0
 scale = Vector2(2.4517388, 1.9999001)
 text = "Drum Pad"
 
@@ -69,6 +71,26 @@ text = "Clap"
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="Volume" type="Label" parent="ControlsBox" unique_id=747099218]
+layout_mode = 2
+text = "Volume"
+
+[node name="VolumeSlider" type="HSlider" parent="ControlsBox" unique_id=1465857478]
+layout_mode = 2
+min_value = -30.0
+max_value = 10.0
+
+[node name="Pitch" type="Label" parent="ControlsBox" unique_id=1631416270]
+layout_mode = 2
+text = "Pitch"
+
+[node name="PitchSlider" type="HSlider" parent="ControlsBox" unique_id=127128978]
+layout_mode = 2
+min_value = 0.5
+max_value = 2.0
+step = 0.1
+value = 1.0
 
 [node name="KickAudio" type="AudioStreamPlayer2D" parent="." unique_id=2141917504]
 stream = ExtResource("1_jyhfs")
